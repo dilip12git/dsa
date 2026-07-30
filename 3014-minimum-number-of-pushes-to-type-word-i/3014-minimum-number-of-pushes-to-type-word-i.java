@@ -3,15 +3,9 @@ class Solution {
         int n=word.length();
         int ans=0;
 
-        int cost =1;
-
-        while(n>0){
-            int take=Math.min(8,n);
-            ans+=take*cost;
-            n-=take;
-            cost++;
+        for(int i=0; i<n;i++){
+            ans+=(i/8)+1;
         }
-
         return ans;
     }
 }
